@@ -28,10 +28,10 @@ const hexToRGB = (hexColor) => {
   hexColor = hexColor.replace(/#/g,"");
   hexColor = hexColor.replace(/[^a-fA-F0-9 #]/g, '').substr(0,6);
 
-  //convert params to strings in preparation for charAt()
-  redHex = String(hexColor.charAt(0).toUpperCase() + hexColor.charAt(1).toUpperCase());
-  greenHex = String(hexColor.charAt(2).toUpperCase() + hexColor.charAt(3).toUpperCase());
-  blueHex = String(hexColor.charAt(4).toUpperCase() + hexColor.charAt(5).toUpperCase());
+  //Convert to uppercase and seprate input characters appropriately
+  redHex = hexColor.charAt(0).toUpperCase() + hexColor.charAt(1).toUpperCase();
+  greenHex = hexColor.charAt(2).toUpperCase() + hexColor.charAt(3).toUpperCase();
+  blueHex = hexColor.charAt(4).toUpperCase() + hexColor.charAt(5).toUpperCase();
 
  
   //Break up hex color string into Red, Green, Blue
